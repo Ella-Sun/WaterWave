@@ -13,6 +13,7 @@
 		44FA6F3C1D18D2D800931E02 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44FA6F3A1D18D2D800931E02 /* Main.storyboard */; };
 		44FA6F3E1D18D2D800931E02 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44FA6F3D1D18D2D800931E02 /* Assets.xcassets */; };
 		44FA6F411D18D2D800931E02 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44FA6F3F1D18D2D800931E02 /* LaunchScreen.storyboard */; };
+		44FA6F4F1D18D36F00931E02 /* WaterWaveView.m in Sources */ = {isa = PBXBuildFile; fileRef = 44FA6F4E1D18D36F00931E02 /* WaterWaveView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		44FA6F3D1D18D2D800931E02 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		44FA6F401D18D2D800931E02 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		44FA6F421D18D2D800931E02 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		44FA6F4D1D18D36F00931E02 /* WaterWaveView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaterWaveView.h; sourceTree = "<group>"; };
+		44FA6F4E1D18D36F00931E02 /* WaterWaveView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaterWaveView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +66,7 @@
 				44FA6F371D18D2D800931E02 /* ViewController.h */,
 				44FA6F381D18D2D800931E02 /* ViewController.m */,
 				44FA6F3A1D18D2D800931E02 /* Main.storyboard */,
+				44FA6F4C1D18D36F00931E02 /* WaterWaveView */,
 				44FA6F3D1D18D2D800931E02 /* Assets.xcassets */,
 				44FA6F3F1D18D2D800931E02 /* LaunchScreen.storyboard */,
 				44FA6F421D18D2D800931E02 /* Info.plist */,
@@ -77,6 +81,15 @@
 				44FA6F321D18D2D800931E02 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		44FA6F4C1D18D36F00931E02 /* WaterWaveView */ = {
+			isa = PBXGroup;
+			children = (
+				44FA6F4D1D18D36F00931E02 /* WaterWaveView.h */,
+				44FA6F4E1D18D36F00931E02 /* WaterWaveView.m */,
+			);
+			path = WaterWaveView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,6 +165,7 @@
 				44FA6F391D18D2D800931E02 /* ViewController.m in Sources */,
 				44FA6F361D18D2D800931E02 /* AppDelegate.m in Sources */,
 				44FA6F331D18D2D800931E02 /* main.m in Sources */,
+				44FA6F4F1D18D36F00931E02 /* WaterWaveView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

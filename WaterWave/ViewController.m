@@ -23,6 +23,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    self.view.backgroundColor = [UIColor lightGrayColor];
     /**<  滚动试图  >**/
     [self setupScrollView];
 }
@@ -50,7 +52,7 @@
 - (void)setupWaterView {
     CGFloat xPiex = 0;
     CGFloat height = 100;
-    CGFloat yPiex = -height*0.95;
+    CGFloat yPiex = -height;
     CGFloat width = [UIScreen mainScreen].bounds.size.width;
     CGRect waterFrame = CGRectMake(xPiex, yPiex, width, height);
     
@@ -73,7 +75,7 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
-        cell.backgroundColor = [UIColor colorWithRed:0.629 green:0.920 blue:0.879 alpha:1.000];
+        cell.backgroundColor = [UIColor whiteColor];
     }
     cell.textLabel.text = [NSString stringWithFormat:@"第%ld行",indexPath.row];
     return cell;
@@ -103,9 +105,9 @@
         return;
     }
     //改变速度
-    CGFloat offsetY = scrollView.contentOffset.y;
-    CGFloat interYpiex = offsetY - _preOffsetX;
-    _preOffsetX = offsetY;
+    CGFloat yOffset = scrollView.contentOffset.y;
+    CGFloat interYpiex = yOffset - _preOffsetX;
+    _preOffsetX = yOffset;
     
     CGFloat ratio = fabs(interYpiex);
     CGFloat amplitude = ratio;
@@ -115,24 +117,27 @@
      *  当waveAmplitude＝3时，波纹趋于平缓（当手指不移动，或者缓慢移动）
      *  需要随着位移&&滑动速度——》改变波动大小
      */
-    if (waterView.waveAmplitude > 15.0f) {
+    if (waterView.waveAmplitude > 9.0f) {
         return;
     }
     if (ratio < 3.0f) {
-        amplitude = 9.0f;
-        waveSpeed = 4.0f;
+        amplitude = 3.0f;
+        waveSpeed = 1.5f;
     } else if (ratio < 6.0) {
-        amplitude = 15.0f;
-        waveSpeed = 8.0f;
+        amplitude = 6.0f;
+        waveSpeed = 3.0f;
+    } else {
+        amplitude = 12.0f;
+        waveSpeed = 3.0f;
     }
     
     //当偏移量较小时，限制振幅，防止振幅过大，遮挡其他空间
-    if (offsetY > -20) {
+    if (yOffset > -20) {
+        amplitude = 1.5f;
+        waveSpeed = 1.0f;
+    } else if (ratio < 3.0f) {
         amplitude = 6.0f;
         waveSpeed = 3.0f;
-    } else if (ratio < 3.0f) {
-        amplitude = 9.0f;
-        waveSpeed = 4.0f;
     }
     
     waterView.waveAmplitude = amplitude;

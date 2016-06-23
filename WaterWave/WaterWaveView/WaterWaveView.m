@@ -42,7 +42,7 @@
     if (self) {
         self.backgroundColor = [UIColor clearColor];
         self.layer.masksToBounds  = YES;
-        waterWaveHeight = self.frame.size.height / 2;
+        waterWaveHeight = self.frame.size.height * 0.5;
         waterWaveWidth  = self.frame.size.width;
         
     }
@@ -56,13 +56,13 @@
     
     if (_firstWaveLayer == nil) {
         _firstWaveLayer = [CAShapeLayer layer];
-        _firstWaveLayer.fillColor = [UIColor colorWithRed:0 green:0.722 blue:1 alpha:1].CGColor;
+        _firstWaveLayer.fillColor = [UIColor colorWithRed:0.507 green:0.690 blue:0.957 alpha:1.000].CGColor;
         [self.layer addSublayer:_firstWaveLayer];
     }
     
     if (_secondWaveLayer == nil) {
         _secondWaveLayer = [CAShapeLayer layer];
-        _secondWaveLayer.fillColor = [UIColor colorWithRed:0.132 green:1.000 blue:0.815 alpha:1.000].CGColor;
+        _secondWaveLayer.fillColor = [UIColor whiteColor].CGColor;
         [self.layer addSublayer:_secondWaveLayer];
     }
     

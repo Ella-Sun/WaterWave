@@ -120,10 +120,7 @@
     if (waterView.waveAmplitude > 9.0f) {
         return;
     }
-    if (ratio < 3.0f) {
-        amplitude = 3.0f;
-        waveSpeed = 1.5f;
-    } else if (ratio < 6.0) {
+    if (ratio < 6.0f) {
         amplitude = 6.0f;
         waveSpeed = 3.0f;
     } else {
@@ -132,13 +129,6 @@
     }
     
     //当偏移量较小时，限制振幅，防止振幅过大，遮挡其他空间
-    if (yOffset > -20) {
-        amplitude = 1.5f;
-        waveSpeed = 1.0f;
-    } else if (ratio < 3.0f) {
-        amplitude = 6.0f;
-        waveSpeed = 3.0f;
-    }
     
     waterView.waveAmplitude = amplitude;
     waterView.waveSpeed = waveSpeed;

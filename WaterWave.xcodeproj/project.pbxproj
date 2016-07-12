@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		442136F51D34A1B30036D20E /* waterWave.gif in Resources */ = {isa = PBXBuildFile; fileRef = 442136F41D34A1B30036D20E /* waterWave.gif */; };
 		44FA6F331D18D2D800931E02 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 44FA6F321D18D2D800931E02 /* main.m */; };
 		44FA6F361D18D2D800931E02 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 44FA6F351D18D2D800931E02 /* AppDelegate.m */; };
 		44FA6F391D18D2D800931E02 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44FA6F381D18D2D800931E02 /* ViewController.m */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		442136F41D34A1B30036D20E /* waterWave.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = waterWave.gif; sourceTree = "<group>"; };
 		44FA6F2E1D18D2D800931E02 /* WaterWave.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WaterWave.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		44FA6F321D18D2D800931E02 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		44FA6F341D18D2D800931E02 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 		44FA6F311D18D2D800931E02 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				442136F41D34A1B30036D20E /* waterWave.gif */,
 				44FA6F321D18D2D800931E02 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -152,6 +155,7 @@
 				44FA6F411D18D2D800931E02 /* LaunchScreen.storyboard in Resources */,
 				44FA6F3E1D18D2D800931E02 /* Assets.xcassets in Resources */,
 				44FA6F3C1D18D2D800931E02 /* Main.storyboard in Resources */,
+				442136F51D34A1B30036D20E /* waterWave.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,6 +318,7 @@
 				44FA6F471D18D2D800931E02 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

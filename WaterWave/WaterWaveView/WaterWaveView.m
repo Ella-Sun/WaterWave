@@ -87,7 +87,7 @@
     offsetX += self.waveSpeed;
     
     NSLog(@"waterView.waveAmplitude==%f",self.waveAmplitude);
-    if (self.waveAmplitude > 1.5) {
+    if (self.waveAmplitude > 3.0) {
         self.waveAmplitude -= 0.05;
     }
     if (self.waveSpeed > 1.5) {

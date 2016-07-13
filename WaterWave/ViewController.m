@@ -9,6 +9,8 @@
 #import "ViewController.h"
 #import "WaterWaveView.h"
 
+#define TopContentOffSet 100
+
 @interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property (nonatomic, assign) CGFloat       preOffsetX;
@@ -33,12 +35,13 @@
  */
 - (void)setupScrollView {
     CGFloat xPiex = 0;
-    CGFloat yPiex = 100;
+    CGFloat yPiex = 20;
     CGFloat width = [UIScreen mainScreen].bounds.size.width;
     CGFloat height = [UIScreen mainScreen].bounds.size.height;
     CGRect scrollFrame = CGRectMake(xPiex, yPiex, width, height);
     
     scrollTable = [[UITableView alloc] initWithFrame:scrollFrame];
+    scrollTable.contentInset = UIEdgeInsetsMake(TopContentOffSet, 0, 0, 0);
     scrollTable.backgroundColor = [UIColor clearColor];
     scrollTable.delegate = self;
     scrollTable.dataSource = self;
@@ -117,11 +120,12 @@
      *  当waveAmplitude＝3时，波纹趋于平缓（当手指不移动，或者缓慢移动）
      *  需要随着位移&&滑动速度——》改变波动大小
      */
+    //这个判断条件不能距离第一阶段的数值偏远，会造成频率突然降低，波形卡顿的现象
     if (waterView.waveAmplitude > 9.0f) {
         return;
     }
-    if (ratio < 6.0f) {
-        amplitude = 6.0f;
+    if (ratio < 9.0f) {
+        amplitude = 9.0f;
         waveSpeed = 3.0f;
     } else {
         amplitude = 12.0f;

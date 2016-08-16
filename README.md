@@ -7,5 +7,3 @@
 
 ![water.gif](https://github.com/Sun-Hong/WaterWave/blob/master/WaterWave/waterWave.gif)
 
-
-https://github.com/Sun-Hong/WaterWave/blob/master/WaterWave/waterWave.gif
